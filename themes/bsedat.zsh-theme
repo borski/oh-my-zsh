@@ -39,5 +39,6 @@ py_venv() {
   fi
 }
 
-PROMPT='$(user_host) $(py_venv) $(rvm_env) $(my_git_prompt_info)%{$reset_color%}
+PROMPT='
+$(user_host) $(py_venv) $(rvm_env) $(my_git_prompt_info)%{$reset_color%}
 $(local_dir) %B$%b '
