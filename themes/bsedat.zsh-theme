@@ -35,7 +35,7 @@ rvm_env() {
 
 py_venv() {
   if [ -n "$VIRTUAL_ENV" ] ; then
-    echo "%{${fg_bold[white]}%}(venv: %{${fg[green]}%}`basename \"$VIRTUAL_ENV\"`%{${fg_bold[white]}%})%{${reset_color}%}"
+    echo "%{${fg_bold[white]}%}(venv: `basename \"$VIRTUAL_ENV\"`)%{${reset_color}%}"
   fi
 }
 
