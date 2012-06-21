@@ -67,6 +67,8 @@ alias ggpush='git push origin $(current_branch)'
 compdef ggpush=git
 alias ggpnp='git pull origin $(current_branch) && git push origin $(current_branch)'
 compdef ggpnp=git
+alias gupnp='git pull upstream $(current_branch) && git push origin $(current_branch)'
+compdef gupnp=git
 
 # Custom:
 gdelb() { git branch -d "$*" && git push origin :"$*"; }
