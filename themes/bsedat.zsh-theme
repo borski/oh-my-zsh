@@ -30,6 +30,8 @@ user_host() {
 rvm_env() {
   if [[ -e ~/.rvm/bin/rvm-prompt ]] ; then
     echo "%{$fg[red]%}[`~/.rvm/bin/rvm-prompt`]%{$reset_color%}"
+  elif [[ -e /usr/local/rvm/bin/rvm-prompt ]] ; then
+    echo  "%{$fg[red]%}[`/usr/local/rvm/bin/rvm-prompt`]%{$reset_color%}"
   fi
 }
 
