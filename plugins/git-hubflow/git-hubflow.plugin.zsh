@@ -346,3 +346,6 @@ __git_command_successful () {
 }
 
 zstyle ':completion:*:*:git:*' user-commands flow:'description for foo'
+
+alias ghf="git hf"
+alias ghf="git hf feature"
