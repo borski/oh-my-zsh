@@ -92,7 +92,7 @@ function current_repository() {
   echo $(git remote -v | cut -d':' -f 2)
 }
 
-# these aliases take advantage of the previous function
+# Custom:
 alias ggpull='git pull origin $(current_branch)'
 compdef ggpull=git
 alias ggpush='git push origin $(current_branch)'
@@ -104,7 +104,6 @@ compdef gupnp=git
 alias ggpushf='git push origin $(current_branch) --force'
 compdef ggpushf=git
 
-# Custom:
 gdelb() { git branch -d "$*" && git push origin :"$*"; }
 
 # Pretty log messages
