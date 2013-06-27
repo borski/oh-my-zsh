@@ -21,7 +21,7 @@ prompt_char() {
 }
 
 local_dir() {
-  echo "%{$reset_color%}%B%~% %b"
+  echo "%{$reset_color%}%B${PWD/#$HOME/~}%b"
 }
 
 user_host() {
@@ -42,6 +42,12 @@ py_venv() {
   fi
 }
 
+battery_charge() {
+  echo `$BAT_CHARGE` 2>/dev/null
+}
+
 PROMPT='
 $(py_venv)$(rvm_env) $(user_host) %{$fg[yellow]%}in%{$reset_color%} $(local_dir)
 $(prompt_char) $(git_prompt_info)%{$reset_color%} %{$fg[yellow]%}→%{$fg[white]%} '
+
+RPROMPT='$(battery_charge)'
